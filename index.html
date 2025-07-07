@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casio Calculator - Feminine Style</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="solar-panel"></div>
+      <div class="brand">CASIO</div>
+      <div class="model">fx-PINK CLASSWIZ</div>
+      <div class="display">
+        <div class="display-secondary" id="secondary-display"></div>
+        <div class="display-main" id="main-display">0</div>
+      </div>
+      <div class="buttons">
+        <button class="clear" onclick="clearAll()">AC</button>
+        <button class="function" onclick="addToDisplay('(')">(</button>
+        <button class="function" onclick="addToDisplay(')')">)</button>
+        <button class="operation" onclick="setOperation('/')">÷</button>
+
+        <button onclick="addToDisplay('7')">7</button>
+        <button onclick="addToDisplay('8')">8</button>
+        <button onclick="addToDisplay('9')">9</button>
+        <button class="operation" onclick="setOperation('*')">×</button>
+
+        <button onclick="addToDisplay('4')">4</button>
+        <button onclick="addToDisplay('5')">5</button>
+        <button onclick="addToDisplay('6')">6</button>
+        <button class="operation" onclick="setOperation('-')">−</button>
+
+        <button onclick="addToDisplay('1')">1</button>
+        <button onclick="addToDisplay('2')">2</button>
+        <button onclick="addToDisplay('3')">3</button>
+        <button class="operation" onclick="setOperation('+')">+</button>
+
+        <button onclick="addToDisplay('0')">0</button>
+        <button onclick="addToDisplay('.')">.</button>
+        <button class="function" onclick="backspace()">DEL</button>
+        <button class="equals" onclick="calculate()">=</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

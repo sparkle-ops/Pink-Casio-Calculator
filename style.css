@@ -1,0 +1,161 @@
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff5f7;
+  font-family: "Arial Rounded MT Bold", "Arial", sans-serif;
+  margin: 0;
+}
+
+.calculator {
+  width: 320px;
+  background: radial-gradient(
+    ellipse at center,
+    #fb83fa 0%,
+    #e93cec 100%
+  ); 
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(255, 105, 180, 0.2);
+  border: 2px solid #ffb6c1;
+}
+
+.brand {
+  color: #ff0055;
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.model {
+  color: #ff0000;
+  font-size: 12px;
+  margin-bottom: 15px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.display {
+  background-color: #fff9fb;
+  border: 2px solid #ffb6c1;
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: right;
+  font-family: "Verdana", sans-serif;
+  height: 70px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px rgba(255, 182, 193, 0.3);
+}
+
+.display-main {
+  font-size: 32px;
+  color: #c41e55;
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-weight: bold;
+}
+
+.display-secondary {
+  font-size: 16px;
+  color: #ff6b9d;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+button {
+  height: 55px;
+  border: none;
+  border-radius: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: 0 4px 0 #ffb6c1;
+  transition: all 0.2s;
+  color: #f30000;
+  font-weight: bold;
+}
+
+button:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #ff0303;
+}
+
+.function {
+  background-color: #ff0062;
+  color: white;
+  box-shadow: 0 4px 0 #f10655;
+}
+
+.operation {
+  background-color: #fc4dd6;
+  color: white;
+  box-shadow: 0 4px 0 #d23669;
+}
+
+.equals {
+  background-color: rgba(24, 0, 243, 0.842);
+  color: white;
+  box-shadow: 0 4px 0 #d23669;
+}
+
+.clear {
+  background: linear-gradient(145deg, #ffb6c1, #ff8fab);
+  color: white;
+  box-shadow: 0 4px 0 #d23669;
+}
+
+.solar-panel {
+  width: 140px;
+  height: 25px;
+  background: linear-gradient(145deg, #ffb6c1, #ff8fab);
+  margin-left: auto;
+  margin-bottom: 15px;
+  border: 1px solid #ff6b9d;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px rgba(210, 54, 105, 0.3);
+}
+
+/* Glitter effect on hover */
+button:hover {
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: rotate(30deg);
+  animation: glitter 1.5s infinite;
+}
+
+@keyframes glitter {
+  0% {
+    transform: translateX(-100%) rotate(30deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(30deg);
+  }
+}
